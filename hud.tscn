@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddc3ri0lsnkqh"]
+
+[ext_resource type="Script" uid="uid://1g8y0ucq0ppp" path="res://hud.gd" id="1_8sq4i"]
+[ext_resource type="Texture2D" uid="uid://bbcppbtfoc3qy" path="res://Assets/coinImg.png" id="1_37p78"]
+[ext_resource type="FontFile" uid="uid://bi7qd2k588jw6" path="res://Assets/fonts/PressStart2P-Regular.ttf" id="1_64ctp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2snw"]
+bg_color = Color(0, 0, 0, 0.670588)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_8sq4i")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 36.0
+offset_top = 29.0
+offset_right = 283.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_n2snw")
+
+[node name="CoinsLabel" type="Label" parent="."]
+offset_left = 86.0
+offset_top = 35.0
+offset_right = 150.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.94, 0.626667, 0, 1)
+theme_override_fonts/font = ExtResource("1_64ctp")
+text = "####"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="CoiLabel2" type="Label" parent="."]
+offset_left = 159.0
+offset_top = 35.0
+offset_right = 239.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.941176, 0.627451, 0, 1)
+theme_override_fonts/font = ExtResource("1_64ctp")
+text = "монет"
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 45.0
+offset_top = 33.0
+offset_right = 77.0
+offset_bottom = 65.0
+texture = ExtResource("1_37p78")
+expand_mode = 1

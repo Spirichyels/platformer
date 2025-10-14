@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://6iocuh12t5q1"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4xowi"]
+lightmap_size_hint = Vector2i(17, 19)
+add_uv2 = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.864438, -0.176353, -0.199509, 1.44078, -0.657906, -0.101995, 0.445412, 1.78587, -0.0572758, 0.143893, -0.266621, 0.0873652)
+mesh = SubResource("CylinderMesh_4xowi")
