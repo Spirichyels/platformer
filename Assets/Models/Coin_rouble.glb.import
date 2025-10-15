@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c4msoc0b52gqm"
-valid=false
+path="res://.godot/imported/Coin_rouble.glb-ee3446ba5dae848f9122e613132a34a4.scn"
 
 [deps]
 
-source_file="res://platformer/Assets/Models/Coin_rouble.glb"
+source_file="res://Assets/Models/Coin_rouble.glb"
+dest_files=["res://.godot/imported/Coin_rouble.glb-ee3446ba5dae848f9122e613132a34a4.scn"]
 
 [params]
 

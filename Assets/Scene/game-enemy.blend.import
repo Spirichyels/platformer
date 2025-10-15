@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://40n5rtguve64"
-path="res://.godot/imported/game-enemy.blend-6516c50918557a42d41606306e603397.scn"
+path="res://.godot/imported/game-enemy.blend-cff04f83e62701e6ca6e389c49ed337a.scn"
 
 [deps]
 
-source_file="res://platformer/Assets/Scene/game-enemy.blend"
-dest_files=["res://.godot/imported/game-enemy.blend-6516c50918557a42d41606306e603397.scn"]
+source_file="res://Assets/Scene/game-enemy.blend"
+dest_files=["res://.godot/imported/game-enemy.blend-cff04f83e62701e6ca6e389c49ed337a.scn"]
 
 [params]
 

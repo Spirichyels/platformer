@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b08oh0tmiw6xo"
-path="res://.godot/imported/game-robot-001.blend-122479b639bf807d86e994f801e11020.scn"
+path="res://.godot/imported/game-robot-001.blend-8c1a688b8b142242ca4270afa092caf5.scn"
 
 [deps]
 
-source_file="res://platformer/Assets/Models/game-robot-001.blend"
-dest_files=["res://.godot/imported/game-robot-001.blend-122479b639bf807d86e994f801e11020.scn"]
+source_file="res://Assets/Models/game-robot-001.blend"
+dest_files=["res://.godot/imported/game-robot-001.blend-8c1a688b8b142242ca4270afa092caf5.scn"]
 
 [params]
 

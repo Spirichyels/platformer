@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=4 uid="uid://di1p5epd67778"]
+[gd_scene load_steps=14 format=4 uid="uid://di1p5epd67778"]
 
-[ext_resource type="Script" uid="uid://qju8nbkiobrk" path="res://platformer/Assets/Script/enemy.gd" id="1_lq7x1"]
+[ext_resource type="Script" uid="uid://qju8nbkiobrk" path="res://Assets/Script/enemy.gd" id="1_lq7x1"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_lq7x1"]
 height = 0.172119
@@ -172,6 +172,10 @@ _data = {
 &"squash": SubResource("Animation_7p3f8")
 }
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_d5uhd"]
+height = 0.174408
+radius = 0.334961
+
 [node name="enemy" type="CharacterBody3D"]
 collision_layer = 8
 collision_mask = 2
@@ -182,13 +186,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.330707, 0)
 collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TopChecker"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0111259, 0)
-shape = SubResource("CylinderShape3D_lq7x1")
-
-[node name="SidesChecker" type="Area3D" parent="."]
-collision_layer = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SidesChecker"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0111259, 0)
 shape = SubResource("CylinderShape3D_lq7x1")
 
@@ -224,6 +221,13 @@ libraries = {
 &"": SubResource("AnimationLibrary_jay3b")
 }
 autoplay = "blob"
+
+[node name="SidesChecker" type="Area3D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SidesChecker"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00961021, 0)
+shape = SubResource("CylinderShape3D_d5uhd")
 
 [connection signal="body_entered" from="TopChecker" to="." method="_on_top_checker_body_entered"]
 [connection signal="body_entered" from="SidesChecker" to="." method="_on_sides_checker_body_entered"]

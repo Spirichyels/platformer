@@ -32,7 +32,8 @@ func turn_around():
 
 
 func _on_sides_checker_body_entered(body: Node3D) -> void:
-	get_tree().change_scene_to_file("res://platformer/Assets/Scene/level_1.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene/level_1.tscn")
+	
 	pass # Replace with function body.
 
 
