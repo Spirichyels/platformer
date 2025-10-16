@@ -180,6 +180,7 @@ radius = 0.334961
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("1_lq7x1")
+direction = Vector3(0, 0, 1)
 
 [node name="TopChecker" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.330707, 0)
@@ -228,6 +229,11 @@ collision_layer = 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SidesChecker"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00961021, 0)
 shape = SubResource("CylinderShape3D_d5uhd")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0896918, 0.287689)
+target_position = Vector3(0, -0.3, 0)
+collision_mask = 2
 
 [connection signal="body_entered" from="TopChecker" to="." method="_on_top_checker_body_entered"]
 [connection signal="body_entered" from="SidesChecker" to="." method="_on_sides_checker_body_entered"]
