@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnautx4orbhkp"]
+
+[ext_resource type="FontFile" uid="uid://bi7qd2k588jw6" path="res://Assets/fonts/PressStart2P-Regular.ttf" id="1_wahou"]
+[ext_resource type="Script" uid="uid://bh2s414vlcsoc" path="res://Scene/menu_win.gd" id="1_xx23d"]
+[ext_resource type="Texture2D" uid="uid://vraxdfqx463" path="res://Assets/Models/image-screen-win.png" id="2_wahou"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbejf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="menu_win" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_xx23d")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -30.0
+offset_top = -15.0
+offset_right = 1170.0
+offset_bottom = 668.0
+color = Color(0.416667, 0.3, 1, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 25.0
+offset_right = 1144.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(0.456, 1, 0.36, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("1_wahou")
+theme_override_font_sizes/font_size = 72
+text = "You Win!!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 1093.0
+offset_bottom = 605.0
+texture = ExtResource("2_wahou")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 538.0
+offset_right = 872.0
+offset_bottom = 652.0
+theme_override_colors/font_hover_color = Color(0, 1, 0.116667, 1)
+theme_override_fonts/font = ExtResource("1_wahou")
+theme_override_font_sizes/font_size = 62
+theme_override_styles/focus = SubResource("StyleBoxFlat_gbejf")
+text = "Main Menu"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

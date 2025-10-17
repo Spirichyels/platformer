@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpp8ty0fvor72"]
+
+[ext_resource type="FontFile" uid="uid://bi7qd2k588jw6" path="res://Assets/fonts/PressStart2P-Regular.ttf" id="1_jn6a6"]
+[ext_resource type="Script" uid="uid://ctnhemcaa3ogl" path="res://Script/menu_title.gd" id="1_y2x2w"]
+[ext_resource type="Texture2D" uid="uid://cincjsumu66we" path="res://Assets/Models/image-screen-title.png" id="2_y2x2w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jn6a6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="MenuTitle" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_y2x2w")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -30.0
+offset_top = -15.0
+offset_right = 1170.0
+offset_bottom = 668.0
+color = Color(0.384, 0, 0.64, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 91.0
+offset_right = 1144.0
+offset_bottom = 199.0
+rotation = -0.0494588
+theme_override_colors/font_color = Color(0.967667, 1, 0.03, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.433333, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("1_jn6a6")
+theme_override_font_sizes/font_size = 52
+text = "3D Platformer Game!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 115.0
+offset_right = 1013.0
+offset_bottom = 624.0
+texture = ExtResource("2_y2x2w")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 237.0
+offset_right = 1061.0
+offset_bottom = 351.0
+theme_override_colors/font_hover_color = Color(0.94902, 1, 0, 1)
+theme_override_fonts/font = ExtResource("1_jn6a6")
+theme_override_font_sizes/font_size = 62
+theme_override_styles/focus = SubResource("StyleBoxFlat_jn6a6")
+text = "Play"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
