@@ -22,7 +22,6 @@ SoundManager="*res://Scene/sound_manager.tscn"
 
 [display]
 
-window/size/resizable=false
 window/stretch/mode="canvas_items"
 
 [input]
