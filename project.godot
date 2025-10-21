@@ -13,12 +13,17 @@ config_version=5
 config/name="platformer"
 run/main_scene="uid://cpp8ty0fvor72"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+run/max_fps=30
 config/icon="uid://b1l6bogv2hc7k"
 
 [autoload]
 
-Global="*res://Script/global.gd"
-SoundManager="*res://Scene/sound_manager.tscn"
+Global="*res://Global/global.gd"
+SoundManager="*res://Elements/SounManager/sound_manager.tscn"
+
+[debug]
+
+settings/stdout/print_fps=true
 
 [display]
 
@@ -79,6 +84,7 @@ Esc={
 
 [physics]
 
+common/physics_ticks_per_second=30
 3d/default_gravity=28.0
 
 [rendering]
