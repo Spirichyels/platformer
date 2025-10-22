@@ -1,6 +1,8 @@
 extends CharacterBody3D
 
 @export var PathGameOver = "res://Elements/Menu/Game_Over/menu_game_over.tscn"
+@export var PathWin = "res://Elements/Menu/Win/menu_win.tscn"
+
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 12
@@ -121,13 +123,19 @@ func align_with_floor(floor_normal):
 func bounce():
 	velocity.y = JUMP_VELOCITY * 0.7
 
-func _on_fall_zone_body_entered() -> void:
+func _on_fall_zone_body_entered(_body: Node3D) -> void:
 	print("fall_zone")
 	SoundManager.play_fall_sound()
-	if Global.DEBUG:
-		get_tree().reload_current_scene()
-		pass
-	else:
-		get_tree().change_scene_to_file(PathGameOver)
+	#if Global.DEBUG:
+		#get_tree().reload_current_scene()
+		#pass
+	#else:
+	
+	get_tree().change_scene_to_file(PathGameOver)
 	#get_tree().reload_current_scene()
+	#pass # Replace with function body.
+
+
+func _on_flag_body_entered(body: Node3D) -> void:
+	get_tree().change_scene_to_file(PathWin)
 	pass # Replace with function body.

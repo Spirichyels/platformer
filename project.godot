@@ -20,6 +20,7 @@ config/icon="uid://b1l6bogv2hc7k"
 
 Global="*res://Global/global.gd"
 SoundManager="*res://Elements/SounManager/sound_manager.tscn"
+Events="*res://Global/events.gd"
 
 [debug]
 

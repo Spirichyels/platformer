@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dloga8ng6e58n"]
+
+[ext_resource type="PackedScene" uid="uid://bipc0f3tq05do" path="res://Elements/Menu/Levels/Number/number.tscn" id="1_omxfy"]
+
+[node name="menu_level" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Number" parent="GridContainer" instance=ExtResource("1_omxfy")]
+layout_mode = 2

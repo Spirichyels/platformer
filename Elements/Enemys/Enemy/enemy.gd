@@ -41,7 +41,8 @@ func _on_sides_checker_body_entered(_body: Node3D) -> void:
 		get_tree().reload_current_scene()
 		pass
 	else :
-		get_tree().change_scene_to_file(PathGameOver)
+		Global.change_lives(-1)
+		#get_tree().change_scene_to_file(PathGameOver)
 	
 	pass # Replace with function body.
 

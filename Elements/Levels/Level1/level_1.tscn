@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://ckaoc6uoe53x2"]
+[gd_scene load_steps=14 format=3 uid="uid://ckaoc6uoe53x2"]
 
 [ext_resource type="PackedScene" uid="uid://fmawtf7w8to4" path="res://Elements/Block/block.tscn" id="1_3hls8"]
 [ext_resource type="Script" uid="uid://upeu5l3kg5lq" path="res://Elements/Levels/Level1/level_1.gd" id="1_5rr72"]
 [ext_resource type="PackedScene" uid="uid://cpcchoxnagiu8" path="res://Elements/Player/player.tscn" id="1_hbghi"]
 [ext_resource type="PackedScene" uid="uid://dv4dul70ha77l" path="res://Elements/Menu/Pause/menu_pause.tscn" id="2_a6c3k"]
+[ext_resource type="PackedScene" uid="uid://blttvxkevsu40" path="res://Elements/Flag/flag.tscn" id="2_m6uhi"]
 [ext_resource type="PackedScene" uid="uid://12a4qg1c6xx6" path="res://Elements/Coin/coin.tscn" id="5_rka8t"]
 [ext_resource type="Environment" uid="uid://bp4o54oqtpief" path="res://Assets/Textures/level_1_Environment.tres" id="6_5hph3"]
 [ext_resource type="MeshLibrary" uid="uid://lv14niv04l7i" path="res://Assets/Textures/world-block-v1.tres" id="7_j7kpp"]
@@ -15,6 +16,9 @@
 
 [node name="Level1" type="Node3D"]
 script = ExtResource("1_5rr72")
+
+[node name="Flag" parent="." instance=ExtResource("2_m6uhi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71356, 4.20684, -5.98819)
 
 [node name="menu_pause" parent="." instance=ExtResource("2_a6c3k")]
 
@@ -166,7 +170,7 @@ b = Vector3(-19, 7, -4)
 [node name="SlisensRed" type="Node3D" parent="."]
 
 [node name="SlizenRed-1" parent="SlisensRed" instance=ExtResource("14_y4apx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1081, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9249, 0, 0)
 
 [node name="SlizenRed-2" parent="SlisensRed" instance=ExtResource("14_y4apx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4077, 8.27761, 3.83353)
@@ -175,5 +179,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4077, 8.27761, 3.83353)
 wait_time = 2.0
 autostart = true
 
+[connection signal="body_entered" from="Flag" to="Player" method="_on_flag_body_entered"]
 [connection signal="body_entered" from="FallZone" to="Player" method="_on_fall_zone_body_entered"]
 [connection signal="timeout" from="Spawn" to="." method="_on_spawn_timeout"]

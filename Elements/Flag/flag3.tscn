@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbakv0mv4urk6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rx7en"]
+size = Vector3(1, 1.93652, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_3p2pf"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_fivkq"]
+
+[node name="Flag" type="Node3D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_rx7en")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0124265, 0.999923, 0, -0.999923, -0.0124265, 0, 0, 0, 0.01, 0.5, 0.487033, 0)
+mesh = SubResource("PrismMesh_3p2pf")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, 1, 0, 0, 0, 0.05, 0, 0, 0)
+mesh = SubResource("CylinderMesh_fivkq")

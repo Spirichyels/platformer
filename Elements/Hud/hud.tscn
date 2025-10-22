@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddc3ri0lsnkqh"]
+[gd_scene load_steps=6 format=3 uid="uid://ddc3ri0lsnkqh"]
 
 [ext_resource type="Script" uid="uid://1g8y0ucq0ppp" path="res://Elements/Hud/hud.gd" id="1_8sq4i"]
 [ext_resource type="Texture2D" uid="uid://bbcppbtfoc3qy" path="res://Assets/Models/coinImg.png" id="1_37p78"]
 [ext_resource type="FontFile" uid="uid://bi7qd2k588jw6" path="res://Assets/fonts/PressStart2P-Regular.ttf" id="1_64ctp"]
+[ext_resource type="PackedScene" uid="uid://c6j1wxpapoe3s" path="res://Elements/Heart/heart.tscn" id="4_y8v8o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2snw"]
 bg_color = Color(0, 0, 0, 0.670588)
@@ -17,7 +18,7 @@ script = ExtResource("1_8sq4i")
 [node name="Panel" type="Panel" parent="."]
 offset_left = 36.0
 offset_top = 29.0
-offset_right = 283.0
+offset_right = 286.0
 offset_bottom = 69.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_n2snw")
 
@@ -53,3 +54,28 @@ expand_mode = 1
 [node name="FPS" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 975.0
+offset_top = 38.0
+offset_right = 1095.0
+offset_bottom = 78.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_n2snw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -16.0
+offset_right = 48.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Heart" parent="Panel2/VBoxContainer" instance=ExtResource("4_y8v8o")]
+layout_mode = 2
+size_flags_horizontal = 8

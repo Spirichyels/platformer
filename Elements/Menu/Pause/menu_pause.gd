@@ -32,3 +32,9 @@ func _on_button_2_pressed() -> void:
 	toggle_pause()
 	get_tree().change_scene_to_file(PathMainMenu)
 	pass # Replace with function body.
+
+
+func _on_button_3_pressed() -> void:
+	toggle_pause()
+	get_tree().reload_current_scene()
+	pass # Replace with function body.
