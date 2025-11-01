@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://e34oli1xunff"
 path.s3tc="res://.godot/imported/robot_mix_decals.png-76201f8d0d29d23543564e0aefd1b48e.s3tc.ctex"
+path.etc2="res://.godot/imported/robot_mix_decals.png-76201f8d0d29d23543564e0aefd1b48e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/robot_mix_decals.png"
-dest_files=["res://.godot/imported/robot_mix_decals.png-76201f8d0d29d23543564e0aefd1b48e.s3tc.ctex"]
+dest_files=["res://.godot/imported/robot_mix_decals.png-76201f8d0d29d23543564e0aefd1b48e.s3tc.ctex", "res://.godot/imported/robot_mix_decals.png-76201f8d0d29d23543564e0aefd1b48e.etc2.ctex"]
 
 [params]
 
